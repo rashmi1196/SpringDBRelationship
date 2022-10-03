@@ -1,4 +1,5 @@
-package com.spring.database.relationship.SpringDBRelationship.oneToone.entity;
+package oneToone.entity;
+
 
 import javax.persistence.*;
 
@@ -11,13 +12,19 @@ public class PlayerProfile {
 
     private String instaProfile;
 
+
     public PlayerProfile() {
+
     }
 
     public PlayerProfile(int id, String instaProfile) {
+        super();
         this.id = id;
         this.instaProfile = instaProfile;
     }
+
+
+
 
     public int getId() {
         return id;

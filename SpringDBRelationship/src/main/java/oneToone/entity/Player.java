@@ -1,4 +1,4 @@
-package com.spring.database.relationship.SpringDBRelationship.oneToone.entity;
+package oneToone.entity;
 
 import javax.persistence.*;
 
@@ -20,6 +20,8 @@ public class Player {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "profile_id", referencedColumnName = "id")
     private PlayerProfile playerProfile;
+
+
 
     public Player(){
 

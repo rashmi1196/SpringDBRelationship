@@ -1,8 +1,8 @@
-package com.spring.database.relationship.SpringDBRelationship.oneToone.service;
+package com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.service;
 
-import com.spring.database.relationship.SpringDBRelationship.oneToone.entity.Player;
-import com.spring.database.relationship.SpringDBRelationship.oneToone.entity.PlayerProfile;
-import com.spring.database.relationship.SpringDBRelationship.oneToone.repository.PlayerProfileRepository;
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.entity.PlayerProfile;
+
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.repository.PlayerProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

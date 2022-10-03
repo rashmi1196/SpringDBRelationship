@@ -1,6 +1,7 @@
-package com.spring.database.relationship.SpringDBRelationship.oneToone.repository;
+package com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.repository;
 
-import com.spring.database.relationship.SpringDBRelationship.oneToone.entity.Player;
+
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

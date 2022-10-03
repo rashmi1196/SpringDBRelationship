@@ -1,8 +1,10 @@
-package com.spring.database.relationship.SpringDBRelationship.oneToone.service;
+package com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.service;
 
-import com.spring.database.relationship.SpringDBRelationship.oneToone.entity.Player;
-import com.spring.database.relationship.SpringDBRelationship.oneToone.entity.PlayerProfile;
-import com.spring.database.relationship.SpringDBRelationship.oneToone.repository.PlayerRepository;
+
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.entity.Player;
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.entity.PlayerProfile;
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.entity.Registration;
+import com.spring.database.relationship.SpringDBRelationship.oneToManyBidirectional.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +42,18 @@ public class PlayerService {
 
         player.setPlayerProfile(profile);
 
+        return playerRepository.save(player);
+    }
+
+    public Player assignRegistration (int id, Registration registration){
+        Player player = playerRepository.findById(id).get();
+        player.registerPlayer(registration);
+        return playerRepository.save(player);
+    }
+
+    public Player removeRegistrations (int id, Registration registration){
+        Player player = playerRepository.findById(id).get();
+        player.removeRegistrations(registration);
         return playerRepository.save(player);
     }
 }
